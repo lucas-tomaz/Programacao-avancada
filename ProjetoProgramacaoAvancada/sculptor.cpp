@@ -180,7 +180,7 @@ void Sculptor::writeOFF(const char* filename){
             for(int k = 0; k < nz; k++){
                 if(v[i][j][k].show){
                     int baseIndex = voxelIndex * 8;
-                    file << "4 " <<  << " " << baseIndex + 3 << " " << baseIndex + 2 << " " << baseIndex + 1 << " "
+                    file << "4 " << baseIndex << " " << baseIndex + 3 << " " << baseIndex + 2 << " " << baseIndex + 1 << " "
                          << v[i][j][k].r << " " << v[i][j][k].g << " " << v[i][j][k].b << " " << v[i][j][k].a << std::endl;
                     file << "4 " << baseIndex + 4 << " " << baseIndex + 5 << " " << baseIndex + 6 << " " << baseIndex + 7 << " "
                          << v[i][j][k].r << " " << v[i][j][k].g << " " << v[i][j][k].b << " " << v[i][j][k].a << std::endl;
